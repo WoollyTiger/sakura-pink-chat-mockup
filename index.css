@@ -1,0 +1,221 @@
+*, body, html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+}
+
+#container {
+    width: 450px;
+    background-color: #FFF9F9;
+    border-radius: 15px;
+    border: 1px solid rgba(225, 156, 156, 30%);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    box-shadow: 0px 0px 100px 3px rgba(225, 156, 156, 0.25);
+}
+
+/* HEADER STYLE */
+#top-bar {
+    padding: 20px 44px;
+    background-color: #FCDBDB;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: rgba(225, 156, 156, 30%);
+    border-radius: 15px 15px 0 0;
+    
+    display: flex;
+    flex-direction: row;
+}
+
+#user-info {
+    font-size: 1.3rem;
+    color: white;
+    text-shadow: 0px 0px 4px rgba(225, 156, 156, 0.3);
+}
+
+/* MIDDLE MESSAGE STYLES */
+
+/* welcome msg */
+
+#welcome-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#username-input {
+    
+    border: 1px solid rgba(225, 156, 156, 30%);
+    border-radius: 25px;
+    padding: 14px 27px;
+    color: #FCDBDB;
+    font-size: 0.9rem;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#welcome-msg {
+    animation-name: welcomeSpan;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+.welcome-class {
+    animation-name: stateName;
+    animation-duration: 4s;
+    animation-delay: 3.9s;
+    animation-fill-mode: forwards;
+}
+
+.welcome-screen-hidden {
+    display: none!important;
+}
+
+
+.welcome-username-screen {
+    display: block;
+    opacity: 0;
+    animation-name: inputName;
+    animation-delay: 0s;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+.welcome-message-screen {
+    display: flex;
+    opacity: 0;
+    animation-name: messageContainer;
+    animation-delay: 0s;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+
+#welcome-btn {
+    border-radius: 25px;
+    background: #E19C9C;
+    border: none;
+    padding: 10px;
+    width: 150px;
+    
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    color: white;
+    font-size: 1rem;
+}
+
+
+@keyframes inputName {
+    0% {transform: translateY(-20px); opacity: 0}
+    50% {transform: translateY(0px); opacity: 1}
+    100% {transform: translateY(0px); opacity: 1}
+    
+}
+
+@keyframes stateName {
+    0% {transform: translateX(-20px); opacity: 0}
+    50% {transform: translateX(0px); opacity: 1}
+    75% {transform: translateX(0px); opacity: 1}
+    100% {transform: translateX(20px); opacity: 0}
+}
+@keyframes welcomeSpan {
+    0% {transform: translateX(-20px); opacity: 0}
+    50% {transform: translateX(0px); opacity: 1}
+    75% {transform: translateX(0px); opacity: 1}
+    100% {transform: translateX(20px); opacity: 0}
+}
+
+@keyframes messageContainer {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+/* EOF welcome msg */ 
+
+#msg-container, #welcome-container {
+    min-height: 250px;
+    padding: 44px;
+    color: #FCDBDB;
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    /* display: flex; */
+    flex-direction: column;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+
+
+#no-msg-img {
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+.message {
+    color: #7D2525;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 22px;
+    text-align: left;
+    border: 1px solid #FCDBDB;
+    margin-bottom: 30px;
+    width: fit-content;
+}
+.friend-message {
+    background: #FFFFFF;
+    border-radius: 20px 20px 20px 0px;
+}
+.own-message {
+    background: #FCDBDB;
+    border-radius: 20px 20px 0px 20px;
+    align-self: flex-end;
+    
+    
+}
+/* EOF MID MESSAGE STYLES */
+
+/* BOTTOM FOOTER STYLE */
+#footer {
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: rgba(225, 156, 156, 30%);
+    border-radius: 0 0 15px 15px;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    padding: 19px 21px;
+}
+
+#user-msg-input {
+    border: 1px solid rgba(225, 156, 156, 30%);
+    border-radius: 25px;
+    padding: 14px 27px;
+    color: #FCDBDB;
+    font-size: 0.9rem;
+    width: 325px;
+}
+
+#send-msg-btn {
+    border-radius: 50%;
+    background: #E19C9C;
+    border: none;
+    padding: 10px;
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+}
+
